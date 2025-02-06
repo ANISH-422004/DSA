@@ -48,7 +48,7 @@ var checkIfExist = function (arr) {
         let num = arr[i];
 
         // Check if 2 * num or num / 2 already exists in the map
-        if ((map.has(num * 2) || (num % 2 === 0 && map.has(num / 2))) && i != map.get(arr[i])  ) {
+        if ( (map.has(num * 2) || (num % 2 === 0 && map.has(num / 2))) && i != map.get(arr[i])  ) {
             return true;
         }
 
