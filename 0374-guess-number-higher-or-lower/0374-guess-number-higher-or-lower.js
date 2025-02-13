@@ -12,12 +12,13 @@
  * @return {number}
  */
 var guessNumber = function (n) {
-    let f = 1, l = n 
-    while(f<=l){
-        let m = Math.floor((f+l)/2)
-        if(guess(m)==0) return m
-        else if(guess(m)==-1) l=m-1
-        else f=m+1
+    let f = 1, l = n
+    while (f <= l) {
+        let m = Math.floor((f + l) / 2)
+        let g = guess(m)
+        if (g == 0) return m
+        else if (g == -1) l = m - 1
+        else f = m + 1
     }
 
     return -1
