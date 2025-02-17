@@ -1,21 +1,18 @@
-/**
- * @param {number[]} nums
- * @return {number}
- */
-var findMin = function(nums) {
-    let start = 0, end = nums.length - 1;
-    let ans = nums[0]; // Store the minimum element
+function findMin(arr) {
+    let low = 0, high = arr.length - 1;
+    let ans =+Infinity
 
-    while (start <= end) {
-        let mid = Math.floor((start + end) / 2);
+    while (low <= high) {
+        let mid = Math.floor((low + high) / 2);
 
-        if (nums[mid] >= nums[start]) { 
-            ans = Math.min(ans, nums[start]);
-            start = mid + 1;
+        if (arr[low] <= arr[mid]) {
+            ans = Math.min(ans, arr[low]);
+            low = mid + 1;
         } else {
-            ans = Math.min(ans, nums[mid]);
-            end = mid - 1;
+            high = mid - 1;
+            ans = Math.min(ans, arr[mid]);
         }
     }
+    
     return ans;
-};
+}
