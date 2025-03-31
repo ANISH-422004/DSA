@@ -14,7 +14,7 @@ var solve = function (arr, k, i) {
 
 
 var findTheWinner = function (n, k) {
-    k-- 
+    k-- // detucting khud ka step first 
     let arr = new Array(n)
     for(let i = 0  ;i<arr.length ; i ++){ 
         arr[i]= i+1
