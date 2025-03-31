@@ -2,9 +2,9 @@ var reverseKGroup = function(head, k) {
     if (!head || !head.next ||  k === 1) return head;  // Base case
 
     let temp = head;
-    let count = 0;
+    let count = 1;
 
-    while (temp) {
+    while (temp.next) {
         temp = temp.next;
         count++;
     }
